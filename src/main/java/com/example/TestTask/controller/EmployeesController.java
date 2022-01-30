@@ -48,7 +48,7 @@ public class EmployeesController {
         employees.setFirstName(req.getFirstName());
         employees.setLastName(req.getLastName());
         employees.setPhone(req.getPhone());
-        employees.setDepartId(req.getDepart());
+        employees.setDepartId(req.getDepartId());
         employeesService.createEmployees(employees);
         return "Пользователь добавлен";
     }
@@ -60,7 +60,7 @@ public class EmployeesController {
         employees.setFirstName(req.getFirstName());
         employees.setLastName(req.getLastName());
         employees.setPhone(req.getPhone());
-        employees.setDepartId(req.getDepart());
+        employees.setDepartId(req.getDepartId());
         employeesService.updateEmployees(employees);
         return "Обновлен "
                 + findById(employees.getId());

@@ -10,7 +10,7 @@ public class EmployeesResp {
     private String lastName;
     private String firstName;
     private Long phone;
-    private Integer depart;
+    private Integer departId;
 
 
     public static EmployeesResp of(Employee employee) {
@@ -18,7 +18,7 @@ public class EmployeesResp {
         employeesResp.setFirstName(employee.getFirstName());
         employeesResp.setLastName(employee.getLastName());
         employeesResp.setPhone(employee.getPhone());
-        employeesResp.setDepart(employee.getDepartId());
+        employeesResp.setDepartId(employee.getDepartId());
         return employeesResp;
 
     }

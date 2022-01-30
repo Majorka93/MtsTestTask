@@ -18,7 +18,7 @@ public class EmployeesReq {
     private String firstName;
     @NotNull
     private Long phone;
-    private Integer depart;
+    private Integer departId;
 
 
 }
