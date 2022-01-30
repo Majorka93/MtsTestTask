@@ -1,0 +1,23 @@
+create table employees(
+                          id serial primary key ,
+                          first_name text,
+                          last_name text,
+                          phone bigint,
+                          depart_id integer references departments(id)
+);
+
+create table departments(
+                            id serial primary key,
+                            name text
+);
+
+INSERT INTO public.employees (id, first_name, last_name, phone, depart_id)
+VALUES (DEFAULT, 'Ivan', 'Ivanov', 89990001122, 2);
+INSERT INTO public.employees (id, first_name, last_name, phone, depart_id)
+VALUES (DEFAULT, 'Sidr', 'Sidorov', 89990001133, 3);
+INSERT INTO public.employees (id, first_name, last_name, phone, depart_id)
+VALUES (DEFAULT, 'Petr', 'Petrov', 89990001144, 1);
+
+INSERT INTO public.departments (id, name) VALUES (DEFAULT, 'Manager');
+INSERT INTO public.departments (id, name) VALUES (DEFAULT, 'Developer');
+INSERT INTO public.departments (id, name) VALUES (DEFAULT, 'Security');
