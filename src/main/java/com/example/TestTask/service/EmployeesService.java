@@ -22,7 +22,7 @@ public class EmployeesService {
     }
 
     public List<Employee> findAll(List<Integer> departsId) {
-        if (departsId.isEmpty()) {
+        if (departsId == null || departsId.isEmpty()) {
             return employeesRepository.findAll();
         } else {
             return employeesRepository.findAllByDepartIdIn(departsId);
