@@ -1,4 +1,4 @@
-package com.example.TestTask.model;
+package com.example.employeesrestservice.model;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
-package com.example.TestTask.repository;
+package com.example.employeesrestservice.repository;
 
-import com.example.TestTask.model.Employee;
+import com.example.employeesrestservice.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Collection;

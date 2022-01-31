@@ -1,7 +1,7 @@
-package com.example.TestTask.service;
+package com.example.employeesrestservice.service;
 
-import com.example.TestTask.model.Employee;
-import com.example.TestTask.repository.EmployeesRepository;
+import com.example.employeesrestservice.model.Employee;
+import com.example.employeesrestservice.repository.EmployeesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

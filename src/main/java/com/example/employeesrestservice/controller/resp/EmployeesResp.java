@@ -1,6 +1,6 @@
-package com.example.TestTask.controller.resp;
+package com.example.employeesrestservice.controller.resp;
 
-import com.example.TestTask.model.Employee;
+import com.example.employeesrestservice.model.Employee;
 import lombok.Data;
 
 @Data

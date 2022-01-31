@@ -1,4 +1,4 @@
-package com.example.TestTask.config;
+package com.example.employeesrestservice.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

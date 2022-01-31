@@ -1,4 +1,4 @@
-package com.example.TestTask.controller.req;
+package com.example.employeesrestservice.controller.req;
 
 import lombok.Data;
 

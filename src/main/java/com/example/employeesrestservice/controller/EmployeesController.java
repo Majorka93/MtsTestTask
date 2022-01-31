@@ -1,9 +1,10 @@
-package com.example.TestTask.controller;
+package com.example.employeesrestservice.controller;
 
-import com.example.TestTask.controller.req.EmployeesReq;
-import com.example.TestTask.controller.resp.EmployeesResp;
-import com.example.TestTask.model.Employee;
-import com.example.TestTask.service.EmployeesService;
+import com.example.employeesrestservice.controller.req.EmployeesReq;
+import com.example.employeesrestservice.controller.resp.EmployeesResp;
+import com.example.employeesrestservice.model.Employee;
+import com.example.employeesrestservice.service.EmployeesService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -22,7 +23,7 @@ public class EmployeesController {
         this.employeesService = employeesService;
     }
 
-
+    @ApiOperation(value = "Получение всех сотрудников/фильтрация по департаментам", response = Iterable.class)
     @GetMapping()
     public List<EmployeesResp> findAll(@RequestParam(required = false) List<Integer> departsId) {
         return employeesService.findAll(departsId).stream()
@@ -30,18 +31,18 @@ public class EmployeesController {
                 .collect(Collectors.toList());
     }
 
-
+    @ApiOperation(value = "Получить сотрудника по id")
     @GetMapping("/{id}")
     public Employee findById(@PathVariable(value = "id") Long id) {
         return employeesService.findById(id);
     }
-
+    @ApiOperation(value = "Удалить сотрудника")
     @DeleteMapping()
     public String deleteById(@RequestParam(value = "id", required = false) Long id) {
         employeesService.deleteById(id);
         return "Пользователь с id " + id + " удален";
     }
-
+    @ApiOperation(value = "Добавить сотрудника")
     @PostMapping()
     public String createEmployees(@RequestBody @Validated EmployeesReq req) {
         Employee employees = new Employee();
@@ -52,7 +53,7 @@ public class EmployeesController {
         employeesService.createEmployees(employees);
         return "Пользователь добавлен";
     }
-
+    @ApiOperation(value = "Изменить сотрудника")
     @PutMapping()
     public String updateEmployees(@RequestBody EmployeesReq req) {
         Employee employees = new Employee();
