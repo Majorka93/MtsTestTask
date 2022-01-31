@@ -1,4 +1,4 @@
-package com.example.employeesrestservice.controller.req;
+package com.example.employees.controller.req;
 
 import lombok.Data;
 

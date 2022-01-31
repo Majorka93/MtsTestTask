@@ -1,4 +1,4 @@
-package com.example.employeesrestservice.model;
+package com.example.employees.model;
 
 import lombok.Data;
 

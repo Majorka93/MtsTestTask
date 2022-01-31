@@ -1,9 +1,9 @@
-package com.example.employeesrestservice.controller;
+package com.example.employees.controller;
 
-import com.example.employeesrestservice.controller.req.EmployeesReq;
-import com.example.employeesrestservice.controller.resp.EmployeesResp;
-import com.example.employeesrestservice.model.Employee;
-import com.example.employeesrestservice.service.EmployeesService;
+import com.example.employees.controller.req.EmployeesReq;
+import com.example.employees.controller.resp.EmployeesResp;
+import com.example.employees.model.Employee;
+import com.example.employees.service.EmployeesService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
